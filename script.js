@@ -36,6 +36,14 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
     return finalPrice;
     }
     
+    FormElm.addEventListener("submit",function(event) {
+        event.preventDefault();
+        NameFullCard.innerHTML = FullNameElm.value;
+        NcCard.innerHTML = NumberNc = Math.ceil(Math.random() * 12);
+        CpCard.innerHTML = NumberCp = Math.ceil(Math.random() * 10000);
+        const price = KmPriceCalculator(KmElm, ChoiceElm).toFixed(2); 
+        CostoCard.innerHTML = `${price} €`;
+    })
     
 
    
