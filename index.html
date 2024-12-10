@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js-biglietto-treno-form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+    <div class="container">
+        <form id="form" action="">
+            <div class="info">
+                <div>
+                    <h2>Nome e cognome</h2>
+                    <input type="text" id="full-name">
+                </div>
+                <div>
+                    <h2>km da percorrere</h2>
+                    <input type="number" id="km">
+                </div>
+                <div>
+                    <h2>Fascia d'età</h2>
+                    <select name="scelta" id="choice">
+                        <option value="op1">minorenne</option>
+                        <option value="op2">maggiorenne</option>
+                        <option value="op3">over 65</option>
+                    </select>
+                </div>
+            </div>
+            <div class="btn">
+                <button id="button1">Genera</button>
+                <button id="button2">Annulla</button>
+            </div>  
+        </form>
+    </div>
+
+    <h1>IL TUO BIGLIETTO</h1>
+    <div class="container">
+        
+            <p>Nome passeggero <span id="name-full"> -----</span></p>
+            <p>Carrozza <span id="n-c"> ----</span></p>
+            <p>NumeroCp <span id="c-p"> -----</span></p>
+            <p>Costo biglietto <span id="costo"> -----</span></p>
+    </div>
+    
+
+  <script src="script.js"></script>
+
+</body>
+</html>

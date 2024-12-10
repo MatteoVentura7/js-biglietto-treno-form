@@ -1,0 +1,66 @@
+/*----------------
+    RESET
+------------------*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #B91550;
+}
+
+.container {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+form {
+    padding-left: 9.375rem;
+    padding-right: 9.375rem;
+    padding-top: 3.125rem;
+ 
+}
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+}
+
+h2 {
+    padding-bottom: 1.25rem;
+    color: #B91550;
+    text-align: center;
+}
+
+input {
+    border-color: #B91550;
+    font-size: 1.25rem;
+}
+select {
+    border-color: #B91550;
+    font-size: 1.25rem;
+}
+
+.btn {
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 1.875rem;
+    
+}
+
+button {
+    font-size: 1.25rem;
+    color: #B91550;
+    
+}
