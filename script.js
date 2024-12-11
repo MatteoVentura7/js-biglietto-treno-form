@@ -11,8 +11,10 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
  const KmElm = document.getElementById("km");
  const ChoiceElm = document.getElementById("choice");
  
-
+ 
+ const ticketCard = document.querySelector(".ticket");
  const NameFullCard = document.getElementById("name-full");
+ const ticketTypeCard = document.getElementById("ticketType");
  const NcCard = document.getElementById("n-c");
  const CpCard = document.getElementById("c-p");
  const CostoCard = document.getElementById("costo");
@@ -26,10 +28,10 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
     let discount = 0;
     let finalPrice = kmCo;
     
-    if (ChoiceElm.value == "op1") {
+    if (ChoiceElm.value == "minorenne") {
         discount = kmCo * 0.20;
         finalPrice = kmCo - discount;
-    } else if (ChoiceElm.value == "op3") {
+    } else if (ChoiceElm.value == "over65") {
         discount = kmCo * 0.40;
         finalPrice = kmCo - discount;
     } 
@@ -38,11 +40,19 @@ il prezzo del biglietto è definito in base ai km (0.21 € al km)
     
     FormElm.addEventListener("submit",function(event) {
         event.preventDefault();
+
+        ticketCard.classList.remove("d-none");
         NameFullCard.innerHTML = FullNameElm.value;
         NcCard.innerHTML = NumberNc = Math.ceil(Math.random() * 12);
         CpCard.innerHTML = NumberCp = Math.ceil(Math.random() * 10000);
         const price = KmPriceCalculator(KmElm, ChoiceElm).toFixed(2); 
         CostoCard.innerHTML = `${price} €`;
+
+        if(ChoiceElm.value == "minorenne" || ChoiceElm.value == "over65"){
+            ticketTypeCard.innerHTML = ` Biglietto scontato per ${ChoiceElm.value}`;
+        } else{
+            ticketTypeCard.innerHTML = "Biglietto standard";
+        }
     })
     
 

@@ -10,43 +10,64 @@
 
 <body>
     <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-    <div class="container">
-        <form id="form" action="">
-            <div class="info">
-                <div>
-                    <h2>Nome e cognome</h2>
-                    <input type="text" id="full-name">
+    <main>
+        <div class="container">
+            <form id="form" action="">
+                <div class="info">
+                    <div>
+                        <h2>Nome e cognome</h2>
+                        <input type="text" id="full-name" required>
+                    </div>
+                    <div>
+                        <h2>km da percorrere</h2>
+                        <input type="number" id="km" required>
+                    </div>
+                    <div>
+                        <h2>Fascia d'età</h2>
+                        <select name="scelta" id="choice" required>
+                            <option value="minorenne">minorenne</option>
+                            <option value="maggiorenne">maggiorenne</option>
+                            <option value="over65">over65</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <h2>km da percorrere</h2>
-                    <input type="number" id="km">
-                </div>
-                <div>
-                    <h2>Fascia d'età</h2>
-                    <select name="scelta" id="choice">
-                        <option value="op1">minorenne</option>
-                        <option value="op2">maggiorenne</option>
-                        <option value="op3">over 65</option>
-                    </select>
+                <div class="btn">
+                    <button id="button1">Genera</button>
+                    <button id="button2">Annulla</button>
+                </div>  
+            </form>
+        </div>
+
+  
+        <section class="ticket d-none">
+            <h1>IL TUO BIGLIETTO</h1>
+            <div class="container">
+                <h2>DETTAGLIO PASSEGGERI</h2>
+                <div class="row">
+                    <div class="ticket-head">
+                        <h3>NOME PASSEGGERO</h3>
+                        <span><strong id="name-full">Jon Snow</strong></span>
+                    </div>
+                    <div class="col">
+                        <span><strong>Offerta</strong></span>
+                        <span id="ticketType"> --- </span>
+                    </div>
+                    <div class="col">
+                        <span><strong>Carrozza</strong></span>
+                        <span id="n-c"> --- </span>
+                    </div>
+                    <div class="col">
+                        <span><strong>Codice CP</strong></span>
+                        <span id="c-p"> --- </span>
+                    </div>
+                    <div class="col">
+                        <span><strong>Costo Biglietto</strong></span>
+                        <span id="costo"> --- </span>
+                    </div>
                 </div>
             </div>
-            <div class="btn">
-                <button id="button1">Genera</button>
-                <button id="button2">Annulla</button>
-            </div>  
-        </form>
-    </div>
-
-    <h1>IL TUO BIGLIETTO</h1>
-    <div class="container">
-        
-            <p>Nome passeggero <span id="name-full"> -----</span></p>
-            <p>Carrozza <span id="n-c"> ----</span></p>
-            <p>NumeroCp <span id="c-p"> -----</span></p>
-            <p>Costo biglietto <span id="costo"> -----</span></p>
-    </div>
-    
-
+        </section>
+    </main>
   <script src="script.js"></script>
 
 </body>

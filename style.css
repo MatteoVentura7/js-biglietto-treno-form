@@ -37,7 +37,7 @@ h1 {
     padding-bottom: 1.875rem;
 }
 
-h2 {
+.info h2 {
     padding-bottom: 1.25rem;
     color: #B91550;
     text-align: center;
@@ -63,4 +63,36 @@ button {
     font-size: 1.25rem;
     color: #B91550;
     
+}
+
+
+.ticket .row {
+    border-top: .0625rem solid gray;
+    border-bottom: .0625rem solid gray;
+    display: flex;
+    margin-bottom: 1.25rem;
+    min-height: 7.5rem;
+
+}
+
+.ticket .col {
+    padding: .625rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+.d-none {
+    display: none;
+}
+
+.ticket-head {
+    background-color: #808080;
+    padding: .625rem 1.25rem;
+    flex-grow: 1;
+}
+
+.ticket h2{
+    padding: 1.25rem 1.25rem;
 }
